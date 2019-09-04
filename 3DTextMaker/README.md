@@ -1,4 +1,8 @@
+
+
 # 使い方
+
+環境：blender2.8 β
 
 1. blender を起動
 1. cube を削除
