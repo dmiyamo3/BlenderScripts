@@ -22,3 +22,20 @@
 出力したファイルをUnityに持っていった例
 
 <img src="https://pbs.twimg.com/media/EDswQDxVAAAqY9G?format=jpg&name=large" width="480">
+
+ベベルなし、リメッシュなし
+
+<img src="https://pbs.twimg.com/media/EDtQu6rU8AA1qsM?format=png&name=900x900" width="480">
+
+ベベルあり、リメッシュなし
+
+<img src="https://pbs.twimg.com/media/EDtQu6rU0AE-BiL?format=png&name=900x900" width="480">
+
+ベベルなし、リメッシュあり
+
+<img src="https://pbs.twimg.com/media/EDtQu6yUYAQm9HS?format=png&name=900x900" width="480">
+
+ベベルあり、リメッシュあり
+
+
+<img src="https://pbs.twimg.com/media/EDtQu6xUEAAmPa3?format=png&name=900x900" width="480">
