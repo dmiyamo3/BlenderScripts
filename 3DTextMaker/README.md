@@ -17,3 +17,8 @@
 1. 右クリックメニューから「スクリプト実行」
 1. 記入したテキストの文字が分割されたFBXファイルとして指定したフォルダに生成される
 
+# 使用例
+
+出力したファイルをUnityに持っていった例
+
+<img src="https://pbs.twimg.com/media/EDswQDxVAAAqY9G?format=jpg&name=large" width="480">
