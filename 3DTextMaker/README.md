@@ -13,7 +13,7 @@
 1. test.pyを開く
 1. dirname（出力先フォルダ）とfontpath（フォントファイル）を適宜変更
 1. テキストを自由に記入
-1. パラメータを自由に変更（extrude, bevel_depth, offset, bevel_resolution）
+1. パラメータを自由に変更（ bevel と remesh を使用する場合は isBevel, isRemeshをそれぞれ False から True に変更する）
 1. 右クリックメニューから「スクリプト実行」
 1. 記入したテキストの文字が分割されたFBXファイルとして指定したフォルダに生成される
 
