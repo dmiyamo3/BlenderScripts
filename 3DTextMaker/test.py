@@ -1,13 +1,14 @@
+import os
 import bpy
 
-# filenameは出力先の絶対パスに書き換える
-# fontpathはフォントの絶対パスに書き換える
-# textは自由に記入してください ※改行は\n(バックスラッシュ + n)
-filename = "C:/.../test.fbx"
+# dirnameは出力先のフォルダの絶対パスに書き換えてください
+# fontpathはフォントファイルの絶対パスに書き換えてください
+# textは自由に記入してください（ファイル名に使用できない記号などは現状使えません）
+dirname = "C:/.../output"
 fontpath = "C:/Windows/Fonts/meiryo.ttc"
-text = "3DTextMaker試作\n@DMiyamo3"
+text = "3DTextMaker試作@DMiyamo3"
 
-def test(extrude = 0.05, bevel_depth = 0.05, offset = 0, bevel_resolution = 4):
+def test(i, text, extrude = 0.05, bevel_depth = 0.05, offset = 0, bevel_resolution = 4):
     bpy.ops.object.text_add(view_align=False, enter_editmode=False, location=(0, 0, 0))
     bpy.context.object.data.extrude = extrude
     bpy.context.object.data.bevel_depth = bevel_depth
@@ -19,8 +20,10 @@ def test(extrude = 0.05, bevel_depth = 0.05, offset = 0, bevel_resolution = 4):
     fnt = bpy.data.fonts.load(fontpath)
     txt.data.font = fnt
 
+    filename = os.path.join(dirname,str(i) + "_" + text + ".fbx")
     bpy.ops.export_scene.fbx(filepath=filename, use_selection=True)
 
     bpy.ops.object.delete()
     
-test()
+for i,c in enumerate(text):
+    test(i, c)
