@@ -2,24 +2,25 @@
 
 入力したテキストを一文字毎分割してまとめてFBXファイルとして出力するblenderスクリプトです。
 
+# 動作環境
+
+ - blender2.8 β
 
 # 使い方
-
-動作環境：blender2.8 β
 
 1. blender を起動
 1. cube を削除
 1. メニューバーから「Scripting」へ移動
 1. test.pyを開く
 1. dirname（出力先フォルダ）とfontpath（フォントファイル）を適宜変更
-1. テキストを自由に記入
+1. テキストを自由に編集
 1. パラメータを自由に変更（ bevel と remesh を使用する場合は isBevel, isRemeshをそれぞれ False から True に変更する）
 1. 右クリックメニューから「スクリプト実行」
-1. 記入したテキストの文字が分割されたFBXファイルとして指定したフォルダに生成される
+1. テキストが分割されたFBXファイルとして指定したフォルダに生成される
 
 # 使用例
 
-出力したファイルをUnityに持っていった例
+出力したファイルをUnityにインポートした例
 
 <img src="https://pbs.twimg.com/media/EDswQDxVAAAqY9G?format=jpg&name=large" width="480">
 
