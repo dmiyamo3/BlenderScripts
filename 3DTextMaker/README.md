@@ -11,10 +11,10 @@
 1. blender を起動
 1. cube を削除
 1. メニューバーから「Scripting」へ移動
-1. test.pyを開く
-1. dirname（出力先フォルダ）とfontpath（フォントファイル）を適宜変更
-1. テキストを自由に編集
-1. パラメータを自由に変更（ bevel と remesh を使用する場合は isBevel, isRemeshをそれぞれ False から True に変更する）
+1. test.pyを編集する
+    - dirname（出力先フォルダ）とfontpath（フォントファイル）を適宜変更
+    - テキストを自由に編集
+    - パラメータを自由に変更（ bevel と remesh を使用する場合は isBevel, isRemeshをそれぞれ False から True に変更する）
 1. 右クリックメニューから「スクリプト実行」
 1. テキストが分割されたFBXファイルとして指定したフォルダに生成される
 
@@ -40,3 +40,16 @@
 
 
 <img src="https://pbs.twimg.com/media/EDtQu6xUEAAmPa3?format=png&name=900x900" width="480">
+
+# CUIで使用する場合
+
+1. test.pyの編集
+    - dirname（出力先フォルダ）とfontpath（フォントファイル）を適宜変更
+    - テキストを自由に編集
+    - パラメータを自由に変更（ bevel と remesh を使用する場合は isBevel, isRemeshをそれぞれ False から True に変更する）
+1. 以下を実行する
+
+```
+cd blender
+blender --background --python C:/.../test.py
+```
