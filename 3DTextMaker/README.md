@@ -11,7 +11,7 @@
 1. blender を起動
 1. cube を削除
 1. メニューバーから「Scripting」へ移動
-1. test.pyを編集する
+1. test.pyを開き、編集する
     - dirname（出力先フォルダ）とfontpath（フォントファイル）を適宜変更
     - テキストを自由に編集
     - パラメータを自由に変更（ bevel と remesh を使用する場合は isBevel, isRemeshをそれぞれ False から True に変更する）
