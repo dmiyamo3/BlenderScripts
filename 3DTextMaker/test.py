@@ -6,7 +6,8 @@ import bpy
 # textは自由に記入してください（ファイル名に使用できない記号などは現状使えません）
 dirname = "C:/.../output"
 fontpath = "C:/Windows/Fonts/meiryo.ttc"
-text = "3DTextMaker試作@DMiyamo3"
+text = "3DTextMaker試作 @ DMiyamo3"
+text = text.replace(' ', '')
 
 def test(i, text, isSave = True, isBevel = False, isRemesh = False):
     bpy.ops.object.text_add(view_align=False, enter_editmode=False, location=(0, 0, 0))
