@@ -1,23 +1,35 @@
 # 3DTextMaker
 
-入力したテキストを一文字毎分割してまとめてFBXファイルとして出力するblenderスクリプトです。
+入力したテキストを一文字毎分割してまとめてFBXファイルとして出力するblenderアドオンです。
 
 # 動作環境
 
  - blender2.8
 
-# 3DTextMakerAddOnの使い方
+# 3DTextMakerAddOn
 
-
-## blender アドオンのインストール方法
+## アドオンのインストール方法
 1. 3DTextMakerAddOn.pyをダウンロード
 1. メニューバーから「編集」->「プリファレンス」へ移動
 1. 「インストール」ボタンからダウンロードした3DTextMakerAddOn.pyを選択してインストールする
 1. 公式・コミュニティ・テスト中と並んでいるメニューの中から「テスト中」を選択
 1. 3DTextMakerAddOnのチェックボックスを有効にする
 
+# 使い方
+1. ツールバーから「3DTextMaker」を開く
+1. フォントのファイルを指定 (デフォルトはメイリオフォント)
+1. テキスト入力 -> 「Create」ボタン -> 分割テキストを生成
+1. 保存先フォルダを指定 -> 「Save」ボタン -> fbx形式で保存される
 
-# 以下、旧バージョンの説明
+<img src="https://pbs.twimg.com/media/EGmJG7nUUAE6GIN?format=jpg&name=medium" width="480">
+
+
+<br>
+<br>
+<br>
+
+
+# 以下、旧バージョン(`test.py`)の説明
 
 # 使い方
 
