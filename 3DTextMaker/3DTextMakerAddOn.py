@@ -24,7 +24,7 @@ def makesplittext(i, text, fontpath):
     txt.name = str(i) + "_" + text
     txt.data.body = text
 
-    if fontpath == None:
+    if fontpath == "":
         fontpath = "C:/Windows/Fonts/meiryo.ttc"
     fnt = bpy.data.fonts.load(fontpath)
     txt.data.font = fnt
