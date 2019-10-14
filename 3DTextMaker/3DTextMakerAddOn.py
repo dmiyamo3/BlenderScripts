@@ -18,7 +18,7 @@ bl_info = {
     "tracker_url":""
 }
 
-def makesplittext(i, text, fontpath):
+def makesplittext(i, text, fontpath, extrude, offset, bevel_depth, bevel_resolution):
     bpy.ops.object.text_add(enter_editmode=False, location=(0, 0, 0))
     txt = bpy.context.object
     txt.name = str(i) + "_" + text
@@ -30,10 +30,15 @@ def makesplittext(i, text, fontpath):
     txt.data.font = fnt
 
     # extrude
-    bpy.context.object.data.extrude = 0.05
+    bpy.context.object.data.extrude = extrude
 
     # offset
-    bpy.context.object.data.offset = 0
+    bpy.context.object.data.offset = offset
+
+    # bevel
+    bpy.context.object.data.bevel_depth = bevel_depth
+    bpy.context.object.data.bevel_resolution = bevel_resolution
+
 
 def savetext(i,text, dirname):
     # save fbx
@@ -61,13 +66,17 @@ class TUTORIAL_OT_3DTextMaker(bpy.types.Operator):
     bl_options = {'REGISTER', 'UNDO'}
 
     #--- properties ---#
-    text: StringProperty(default = "", options = {"HIDDEN"})
-    fontpath: StringProperty(default = "", options = {"HIDDEN"})
+    text:       StringProperty(default = "", options = {"HIDDEN"})
+    fontpath:   StringProperty(default = "", options = {"HIDDEN"})
+    extrude:    FloatProperty()
+    offset:     FloatProperty()
+    bevel_depth:        FloatProperty()
+    bevel_resolution:   IntProperty()
 
     #--- execute ---#
     def execute(self, context):
         for i,c in enumerate(self.text):
-            makesplittext(i, c, self.fontpath)
+            makesplittext(i, c, self.fontpath, self.extrude, self.offset, self.bevel_depth, self.bevel_resolution)
 
         for i,c in enumerate(bpy.context.scene.text):
             bpy.data.objects[str(i) + "_" + c].location.x = i * 1.0
@@ -115,9 +124,18 @@ class TUTORIAL_PT_3DTextMakerPanel(bpy.types.Panel):
 
         layout.prop(context.scene, "text")
 
+        layout.prop(context.scene, "extrude")
+        layout.prop(context.scene, "offset")
+        layout.prop(context.scene, "bevel_depth")
+        layout.prop(context.scene, "bevel_resolution")
+
         on_prop = layout.operator(TUTORIAL_OT_3DTextMaker.bl_idname, text = "Create")
         on_prop.text = context.scene.text
         on_prop.fontpath = context.scene.fontpath
+        on_prop.extrude = context.scene.extrude
+        on_prop.offset = context.scene.offset
+        on_prop.bevel_depth = context.scene.bevel_depth
+        on_prop.bevel_resolution = context.scene.bevel_resolution
 
         layout.prop(context.scene, "dirname")
 
@@ -141,6 +159,11 @@ def register():
     bpy.types.Scene.text = StringProperty(default = "")
     bpy.types.Scene.dirname = StringProperty(default = "")
     bpy.types.Scene.fontpath = StringProperty(default = "")
+    bpy.types.Scene.extrude = FloatProperty()
+    bpy.types.Scene.offset = FloatProperty()
+    bpy.types.Scene.bevel_depth = FloatProperty()
+    bpy.types.Scene.bevel_resolution = IntProperty()
+
 
 def unregister():
     for c in classes:
@@ -150,6 +173,10 @@ def unregister():
     del bpy.types.Scene.text
     del bpy.types.Scene.dirname
     del bpy.types.Scene.fontpath
+    del bpy.types.Scene.extrude
+    del bpy.types.Scene.offset
+    del bpy.types.Scene.bevel_depth
+    del bpy.types.Scene.bevel_resolution
 
 
 if __name__ == "__main__":
