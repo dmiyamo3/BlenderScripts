@@ -7,7 +7,7 @@
  - blender2.8
 
 # アドオンのインストール方法
-1. 3DTextMakerAddOn.pyをダウンロード（https://github.com/dmiyamo3/BlenderScripts/releases/tag/v0.1.20191014）
+1. 3DTextMakerAddOn.pyをダウンロード（[3DTextMaker v0\.1\.20191014](https://github.com/dmiyamo3/BlenderScripts/releases/tag/v0.1.20191014)）
 1. メニューバーから「編集」->「プリファレンス」へ移動
 1. 「インストール」ボタンからダウンロードした3DTextMakerAddOn.pyを選択してインストールする
 1. 公式・コミュニティ・テスト中と並んでいるメニューの中から「テスト中」を選択
