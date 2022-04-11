@@ -7,7 +7,7 @@
  - blender2.8
 
 # アドオンのインストール方法
-1. 3DTextMakerAddOn.pyをダウンロード（[3DTextMaker v0\.1\.20191014](https://github.com/dmiyamo3/BlenderScripts/releases/tag/v0.1.20191014)）
+1. 3DTextMakerAddOn.pyをダウンロード（[3DTextMaker v0\.1\.20220412](https://github.com/dmiyamo3/BlenderScripts/releases/tag/v0.1.20220412)）
 1. メニューバーから「編集」->「プリファレンス」へ移動
 1. 「インストール」ボタンからダウンロードした3DTextMakerAddOn.pyを選択してインストールする
 1. 公式・コミュニティ・テスト中と並んでいるメニューの中から「テスト中」を選択
@@ -18,9 +18,10 @@
 1. フォントのファイルを指定 (デフォルトはメイリオフォント)
 1. テキスト入力 -> 「Create」ボタン -> 分割テキストを生成
 1. 保存先フォルダを指定 -> 「Save」ボタン -> fbx形式で保存される
+1. 保存ファイル名のオプションを追加. チェックがないと「番号 + 一文字」, チェックをつけると「テキスト全部 + 番号」
 
 <img src="https://pbs.twimg.com/media/EGmJG7nUUAE6GIN?format=jpg&name=medium" width="480">
-
+<img src="https://user-images.githubusercontent.com/11884499/162781401-539668b0-15d2-4a8a-84f1-c41d5e1f5a5c.png" width="360">
 
 <br>
 <br>
